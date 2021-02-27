@@ -1,0 +1,49 @@
+{% extends "music/index.html" %} 
+
+{% load staticfiles %}
+
+{% block title %} <title>WEB MUSIC | Sign Up</title> {% endblock %}
+
+{% block style %} <link rel="stylesheet" href="{% static 'music/signup.css' %}"> {% endblock %}
+
+{% block navbar %} {% endblock %}
+
+{% load widget_tweaks %}
+
+{% block content %} 
+
+<div class="cs-signup-screen">
+    <div class="container">
+        <div class="row justify-content-lg-end">
+            <div class="col-lg-7 cs-signup-box">
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form.visible_fields %}
+                        <div class="form-group row">
+                            <label for="{{ field.id_for_label }}" class="col-lg-4 col-form-label cs-label-field">{{ field.label }}</label>
+                            <div class="col-lg-8">
+                                {% render_field field class='form-control form-control-sm' %}
+                            </div>
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-8 cs-text-error">
+                                {% for error in field.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="form-group">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-3">
+                                <input type="submit" class="btn btn-sm btn-default cs-signup-btn" value="Sign Up" />                           
+                                <a href="/" class="btn btn-sm btn-default cs-cancel-btn">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+.navbar {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control,
+select.form-control {
+  border-radius: 0px;
+}
+
+.dropdown-menu {
+  margin-top: 1rem;
+  border-radius: 0;
+  min-width: 100%;
+}
+
+.nav-link,
+.nav-link:hover {
+  display: inline;
+  color: white;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+i.fa-user {
+  margin-left: 0.5em;
+}
+
+/* custom css - new class name */
+
+.cs-content {
+  margin-top: 25px;
+}
+
+.cs-section-header {
+  height: 50px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.cs-form-add,
+.cs-form-edit {
+  padding: 25px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-form-add {
+  background-image: url("./picture/musicdua.jpg");
+}
+
+.cs-form-edit {
+  background-image: url("./picture/musicempat.jpg");
+}
+
+.cs-label-field {
+  color: white;
+}
+
+.cs-form-control {
+  border: 1px solid gray;
+}
+
+.cs-text-center,
+.cs-text-error {
+  text-align: center;
+}
+
+.cs-text-error {
+  font-style: italic;
+  color: white;
+}
+
+.cs-empty-table {
+  background-color: azure;
+  color: grey;
+}
+
+.cs-right-menu {
+  position: absolute;
+  right: 7vw;
+}
+
+.cs-user-photo {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
